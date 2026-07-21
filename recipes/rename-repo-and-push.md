@@ -34,17 +34,14 @@ git add -A
 git commit -m "$(cat <<'EOF'
 v0.2: pivot from prose guidelines to working AI OS
 
-- Restructure as agents/, hooks/, patterns/, recipes/, guides/
+- Restructure as patterns/, recipes/, guides/
 - Add patterns/pr-review-agent/ — turnkey CLAUDE.md-aware reviewer
-- Port 8 portable rules into agents/claude-code/rules/
-- Port 7 working hooks into hooks/
 - Preserve 9 existing guides in guides/
-- New story-driven README
+- New story-driven README + CHANGELOG
+- Rules, hooks, and subagents port queued for v0.3
 
 The original prose guides remain available under guides/.
 Old slug (best-practice-guidelines) redirects to new name via GitHub.
-
-Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
 EOF
 )"
 ```
@@ -104,7 +101,7 @@ Then manually pin it from your GitHub profile page (Pinned repositories → edit
 The launch post writes itself once you've shipped. Suggested places, in order:
 
 1. **X** (`@humanlup`) — quote-tweet the repo URL with one line: "It took me 18 months and President's Club at Yext to figure out what to put in this repo. Open-sourced today." Add the structure tree as a screenshot.
-2. **LinkedIn** — longer-form. Pull from `~/Agents/02-brand/voice/non-dev-playbook-claude.pdf` Block 4 (The Claude Ecosystem). Frame as: "I built an OS for working with Claude. Here's what's in it."
+2. **LinkedIn** — longer-form. Frame as: "I built an OS for working with Claude. Here's what's in it."
 3. **GitHub Discussions** — open a thread for feedback. Pin it.
 4. **Lupo Studios site** — add a featured project card linking to the repo.
 

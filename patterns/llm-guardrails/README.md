@@ -4,7 +4,7 @@ Control how AI agents describe your site, product, or SDK by injecting hidden in
 
 ## Status
 
-**Pattern documented, port in progress.** Reference implementation lives in `~/Projects/09-ai-os/04-labs/llm-guardrails/` (four TypeScript files, ~150 lines total, lifted from Composio's docs repo). The version in this folder will be:
+**Pattern documented, port in progress.** The reference implementation (four TypeScript files, ~150 lines total, lifted from Composio's docs repo) lives in my private lab and lands here productized. The version in this folder will be:
 
 - Stack-agnostic (the original is fumadocs-specific)
 - Includes a `setup-nextjs.sh` and `setup-astro.sh`
@@ -107,9 +107,7 @@ The full HumanLup pitch and pricing for this tier is private. The pattern itself
 
 ## Reading the reference implementation
 
-While the productized version is in progress, the four TypeScript files in `~/Projects/09-ai-os/04-labs/llm-guardrails/` are clean and readable. Start with `index.ts` (entry point), then `session.ts` (the main guardrail content), then `terminology.ts` (a particularly clever piece — a translation table from old SDK terms to current ones).
-
-The accompanying decision record is at `~/Projects/09-ai-os/06-knowledge/research/composio-decision-records/llm-guardrails.md` — explains *why* the architecture works.
+The reference implementation is four TypeScript files: `index.ts` (entry point), `session.ts` (the main guardrail content), and `terminology.ts` (a particularly clever piece — a translation table from old SDK terms to current ones). They ship here, productized, in v0.3. Until then, the section above tells you everything you need to build your own.
 
 ## Origin
 

@@ -28,7 +28,7 @@ If any are missing:
 brew install node gh vercel-cli
 gh auth login
 vercel login
-# rules: see agents/claude-code/rules/README.md in this repo
+# rules: agents/claude-code/rules/ ships in v0.3 — use your own ~/.claude/rules/ until then
 ```
 
 ## Step 1: Create the project (3 min)
@@ -158,4 +158,4 @@ The project is live, deployable, and has a reviewer. From here:
 - **No `--turbopack`** — stable now but still introduces edge cases on some projects; opt in later per project
 - **Public repo by default** — most of my projects are open. Make it private at creation time if it shouldn't be.
 
-These choices match `agents/claude-code/rules/stack-preferences.md` in the repo. If you disagree with any of them, edit your local rules first — the recipe reflects defaults.
+These choices match my `stack-preferences.md` rule (shipping in `agents/claude-code/rules/` in v0.3). If you disagree with any of them, edit your local rules first — the recipe reflects defaults.
