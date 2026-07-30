@@ -37,12 +37,23 @@ lupo-ai-os/
 │   ├── llm-guardrails/   — control how AI agents describe your site/SDK
 │   └── nl-sql-agent/     — natural language → SQL via Composio + Supabase
 ├── recipes/              — opinionated walkthroughs for common bootstraps
-└── guides/               — 9 prose engineering standards (clean code, Next.js, etc.)
+├── guides/               — engineering standards and references
+├── REPO-CATALOG.md       — central map of the GitHub estate
+└── REPO-CLEANUP-QUEUE.md — salvage, naming, and consolidation queue
 ```
 
 The config layer — portable rules, hooks, subagents — is the next port. See [Status](#status).
 
 Each folder has its own README explaining the philosophy and what's inside.
+
+## Repository governance
+
+The GitHub estate is now treated as a portfolio of reusable assets rather than a pile of disconnected experiments.
+
+- [`REPO-CATALOG.md`](REPO-CATALOG.md) records purpose, status, overlap, and destination.
+- [`REPO-CLEANUP-QUEUE.md`](REPO-CLEANUP-QUEUE.md) tracks salvage work, provenance, naming proposals, and decision-ready cleanup candidates.
+
+Repository lifecycle changes are never automatic. Unique work is reviewed and preserved before a rename, archive, or removal is proposed.
 
 ## Start with one of these
 
@@ -53,6 +64,7 @@ Pick the one that matches your day:
 | A CLAUDE.md-aware PR reviewer on any repo | [`patterns/pr-review-agent/`](patterns/pr-review-agent/) | 20 min |
 | To bootstrap a new project the right way | [`recipes/new-claude-code-project.md`](recipes/new-claude-code-project.md) | 10 min |
 | Engineering standards docs (Next.js, Python, Tailwind, etc.) | [`guides/`](guides/) | browse |
+| To understand or consolidate the GitHub estate | [`REPO-CATALOG.md`](REPO-CATALOG.md) | browse |
 
 ## How the pieces fit
 
@@ -62,15 +74,17 @@ Pick the one that matches your day:
        └─→ patterns/  (drop into target repos)
        └─→ recipes/   (walkthroughs you follow once)
        └─→ guides/    (reference when you forget a convention)
+       └─→ catalog    (know what already exists before rebuilding)
 ```
 
-Patterns are pre-built architectures you drop into target repos. Recipes are walkthroughs you follow once and reuse forever. Guides are reference material when you need to remember a convention. The config layer — rules that tell Claude how to write, hooks that enforce what it can do, subagents it can call — ships in v0.3.
+Patterns are pre-built architectures you drop into target repos. Recipes are walkthroughs you follow once and reuse forever. Guides are reference material when you need to remember a convention. The repository catalog prevents duplicate work and turns older experiments into reusable assets.
 
 ## Design principles
 
 - **Opinionated over exhaustive.** This isn't every Claude pattern that exists — it's the ones I use.
 - **Every file runs.** No "TODO: write this section" stubs. If it's here, it ships.
 - **The mess is the method.** Built by learning, breaking, shipping. The system reflects what survived.
+- **Preserve before consolidating.** Reusable work keeps its source attribution.
 - **No emojis. No "delve." No "leverage."** Real specifics over corporate fluff.
 
 ## Status
@@ -82,6 +96,7 @@ Patterns are pre-built architectures you drop into target repos. Recipes are wal
 - `patterns/nl-sql-agent/` — reference implementation, productize later
 - `agents/claude-code/` — portable rules, subagents, skills index — queued for v0.3
 - `hooks/` — working Claude Code hooks — queued for v0.3
+- Repository catalog and consolidation queue — active
 
 ## Contributing
 
