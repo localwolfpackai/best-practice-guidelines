@@ -9,6 +9,7 @@ Central inventory for the `localwolfpackai` GitHub estate.
 - `INCUBATING`: experiment still being evaluated
 - `CLIENT`: client-specific work
 - `SALVAGE`: review for reusable code, design, prompts, or assets
+- `CONSOLIDATE`: preserve unique value, then merge into a stronger destination
 - `REVIEW`: not yet deeply inspected
 
 ## Core destinations
@@ -16,7 +17,8 @@ Central inventory for the `localwolfpackai` GitHub estate.
 | Repository | Purpose | Status |
 |---|---|---|
 | `untitled-ui` | Design system, component library, and visual showcase | `CORE` |
-| `lupo-ai-os` | Agent workflows, prompts, operating documentation, and repo governance | `CORE` |
+| `lupo-ai-os` | Agent workflows, operating documentation, repo governance, and salvage provenance | `CORE` |
+| `claude-config` | Versioned live Claude Code configuration, rules, skills, hooks, and backup policy | `CORE SUPPORT` |
 | `aiuiux-playbooks` | Structured design findings, prompt kits, and QA playbooks | `ACTIVE` |
 | `lupo-portfolio` | Portfolio and proof of work | `ACTIVE` |
 | `sessions-and-lessons` | Durable learning record | `ACTIVE` |
@@ -45,18 +47,22 @@ Central inventory for the `localwolfpackai` GitHub estate.
 
 | Repository | Status | Direction |
 |---|---|---|
-| `claude-config` | `ACTIVE / SALVAGE` | Port durable rules, hooks, and subagents into `lupo-ai-os` with provenance |
-| `daily-dose-agent` | `ACTIVE` | Review reusable scheduled-agent architecture |
+| `claude-config` | `CORE SUPPORT` | Keep separate; it is the deployed Claude Code configuration source of truth |
+| `daily-dose-agent` | `ACTIVE` | Keep as a product; extract its newsletter synthesis pipeline pattern into `lupo-ai-os` |
+| `code-autopsy` | `ACTIVE` | Keep as a product; structured filename-grounded audit schema has been preserved in `lupo-ai-os` |
+| `checklists-and-prompts` | `CONSOLIDATE` | Compare content against `aiuiux-playbooks`, preserve unique metadata and prompts, then propose retirement |
 | `ai-insights` | `INCUBATING` | Clarify boundary versus `aiuiux-playbooks` |
 | `design-intelligence` | `SALVAGE` | Compare with playbooks and preserve unique material |
-| `checklists-and-prompts` | `SALVAGE` | Normalize strong checklists into `lupo-ai-os` |
 | `prompts-071525` | `SALVAGE` | Merge unique prompts into the appropriate library |
 | `nightowl-prompts` | `SALVAGE` | Preserve unique overnight workflows |
-| `code-autopsy` | `SALVAGE` | Preserve distinct review and debugging workflows |
 | `visualize-workflow` | `SALVAGE` | Review workflow visualization logic |
 | `fable-automation-ideas` | `INCUBATING` | Keep as an idea backlog or merge into the OS roadmap |
 | `site-contextlup` | `ACTIVE` | Clarify product boundary and role |
 | `stealth-the-lab` | `ACTIVE` | Clarify product boundary and naming |
+
+## Salvage records
+
+- `docs/repo-salvage/2026-07-31-agent-workflow-findings.md` — boundaries and reusable patterns from `claude-config`, `daily-dose-agent`, `code-autopsy`, and `checklists-and-prompts`.
 
 ## Content and publishing
 
