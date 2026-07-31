@@ -7,93 +7,87 @@ This queue converts repository sprawl into a controlled sequence of review, salv
 ### `design-system-hub-ui`
 
 **Classification:** salvage, then lifecycle review  
-**Why it matters:** The application already models a design-system workspace with a sidebar, main content area, resizable bottom panel, and dedicated sections for buttons, colors, typography, iconography, and writing style.
-
-**Provenance reviewed:**
-
-- `src/App.tsx`
-- `README.md`
-- `package.json`
-
-**High-value material:**
-
-- Catalog navigation model
-- Foundations sections for colors, typography, and iconography
-- Writing-style documentation as a first-class design-system section
-- Resizable inspection panel concept
-
-**Destination:** `untitled-ui`
-
-**Recommended implementation:** Rebuild the concepts using the existing React Aria and Tailwind 4 architecture rather than copying the Radix-heavy implementation directly.
-
+**High-value material:** catalog navigation, design foundations, writing-style documentation, and inspection-panel concepts.  
+**Destination:** `untitled-ui`  
 **Proposed future name if retained:** `lab-design-system-workbench`
 
 ### `nextui-component-library`
 
 **Classification:** thin generated shell under review  
-**Why it matters:** The README identifies it as an automatically synchronized v0/Vercel project, but the inspected root did not expose a normal package manifest.
-
-**Provenance reviewed:**
-
-- `README.md`
-- root `package.json` lookup
-
-**Current finding:** No reusable component implementation has been confirmed yet.
-
-**Next action:** Inspect repository tree and deployment linkage. If it contains no unique work, present it for user-approved retirement.
-
+**Next action:** inspect repository tree and deployment linkage. If no unique work exists, prepare a retirement recommendation.  
 **Proposed future name if retained:** `lab-v0-component-sync`
 
 ### `untitled-ui`
 
 **Classification:** core destination  
-**Direction:** Continue as the main component library. Add a visual catalog that incorporates the strongest workspace concepts from `design-system-hub-ui`.
-
-**Recommended next build:**
-
-1. Category navigation for foundations, base components, application components, and marketing sections.
-2. Responsive desktop/mobile preview controls.
-3. Component maturity, accessibility, and documentation status.
-4. A design-language section for writing style and voice.
+**Direction:** continue as the main component library and visual catalog.
 
 ## Batch 02: design knowledge overlap
 
 ### `aiuiux-playbooks`
 
 **Classification:** active, retain independently  
-**High-value material confirmed:** structured findings schema, controlled vocabulary, prompt kits, export utilities, multi-filter search, QA checklists, tests, and CI.
-
-**Issue found:** README clone instructions reference `aiuiuxplaybooks-09-21` rather than the current repository name.
-
-**Next action:** Correct stale setup instructions and use this repository as the destination for normalized design knowledge.
+**Direction:** destination for normalized design knowledge, prompt kits, findings schemas, and QA checklists.
 
 ### `vivid-uiux-prompt-library`
 
 **Classification:** salvage  
-**Destination:** `aiuiux-playbooks` for design-specific prompt kits; `lupo-ai-os` for general agent operating prompts.
+**Destination:** `aiuiux-playbooks` for design prompts; `lupo-ai-os` for general operating prompts.
 
 ### `design-intelligence`
 
 **Classification:** overlap review  
-**Next action:** Compare its unique research or scoring logic against the playbooks data model before consolidation.
+**Next action:** compare research and scoring logic with the playbooks data model.
 
 ## Batch 03: agent and workflow overlap
 
-Priority review order:
+### Completed review
 
-1. `claude-config`
-2. `checklists-and-prompts`
-3. `daily-dose-agent`
-4. `code-autopsy`
-5. `nightowl-prompts`
-6. `prompts-071525`
-7. `visualize-workflow`
+| Repository | Classification | Result |
+|---|---|---|
+| `claude-config` | `CORE SUPPORT` | Keep separate; boundary and backup policy documented |
+| `daily-dose-agent` | `ACTIVE PRODUCT` | Keep; newsletter synthesis workflow queued for extraction |
+| `code-autopsy` | `ACTIVE PRODUCT` | Keep; structured filename-grounded audit schema preserved in `lupo-ai-os` |
+| `checklists-and-prompts` | `CONSOLIDATE CANDIDATE` | Compare prompts and metadata against `aiuiux-playbooks` before retirement decision |
 
-**Destination rule:**
+Detailed provenance: `docs/repo-salvage/2026-07-31-agent-workflow-findings.md`
 
-- Reusable rules, hooks, subagents, and operating instructions go to `lupo-ai-os`.
-- Product-specific runtime code remains in its product repository.
-- Every copied item receives a provenance note.
+### `checklists-and-prompts` decision gate
+
+Preserve before recommending archive or deletion:
+
+1. Prompts not already represented in `aiuiux-playbooks`.
+2. Difficulty and estimated-time metadata.
+3. Plain-English explanations aimed at non-developers.
+4. Any useful catalog browsing and copy interaction patterns.
+
+**Proposed future name if retained:** `kit-uiux-prompts`
+
+### `daily-dose-agent` extraction target
+
+Create a provider-neutral workflow reference covering:
+
+- newsletter ingestion and cleanup
+- signal ranking and synthesis
+- structured editorial sections
+- brand constants separated from generation logic
+- responsive HTML output and source attribution
+
+**Possible future name:** `agent-daily-dose`
+
+### `code-autopsy` status
+
+No consolidation recommended. It has a clear product boundary, tested UI, structured AI output, and a distinct showcase format.
+
+**Possible clearer name:** `app-code-autopsy`
+
+### Remaining priority order
+
+1. `nightowl-prompts`
+2. `prompts-071525`
+3. `visualize-workflow`
+4. `design-intelligence`
+5. `vivid-uiux-prompt-library`
 
 ## Proposed repository labels
 
@@ -101,7 +95,7 @@ GitHub repository topics should use a small controlled vocabulary:
 
 - Lifecycle: `active`, `incubating`, `reference`, `client`, `legacy`
 - Domain: `design-system`, `ai-agent`, `automation`, `content`, `portfolio`, `plants`, `client-work`
-- Stack: `nextjs`, `react`, `vite`, `tailwind`, `typescript`, `swiftui`
+- Stack: `nextjs`, `react`, `vite`, `tailwind`, `typescript`, `python`, `swiftui`
 - Brand: `lupo-studios`, `humanlup`, `lupos`
 
 Recommended README badges:
@@ -110,6 +104,16 @@ Recommended README badges:
 - primary stack
 - build or verification status
 - destination or superseded-by link where applicable
+
+## Proposed rename queue
+
+| Current | Proposed | Reason |
+|---|---|---|
+| `untitled-ui` | `lupos-ui` or `kit-lupos-ui` | Replace temporary naming with owned design-system identity |
+| `checklists-and-prompts` | `kit-uiux-prompts` | Clarify reusable reference purpose if retained |
+| `daily-dose-agent` | `agent-daily-dose` | Align with purpose-based naming |
+| `code-autopsy` | `app-code-autopsy` | Clarify that it is a runnable product |
+| `design-system-hub-ui` | `lab-design-system-workbench` | Mark as experimental source material if retained |
 
 ## Decision gate
 
