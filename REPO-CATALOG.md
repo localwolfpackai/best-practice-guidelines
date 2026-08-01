@@ -35,7 +35,8 @@ Central inventory for the `localwolfpackai` GitHub estate.
 | `nextui-component-library` | `REVIEW` | Thin v0 synchronization shell; verify whether it contains unique implementation |
 | `visual-canvas` | `INCUBATING` | Review for preview and canvas patterns |
 | `geist-pixel-studio` | `INCUBATING` | Review typography and pixel-system assets |
-| `vivid-uiux-prompt-library` | `SALVAGE` | Move durable prompt patterns into `aiuiux-playbooks` or `lupo-ai-os` |
+| `vivid-uiux-prompt-library` | `CONSOLIDATE` | Verify schema and generator code, then move durable prompt patterns into `aiuiux-playbooks` |
+| `visualize-workflow` | `SALVAGE / KEEP` | Preserve SVG workflow visualization and interaction model; extract to `untitled-ui` before any lifecycle decision |
 | `v0-darkloops` | `SALVAGE` | Review reusable visual loops and components |
 | `glass-agent-portal` | `SALVAGE` | Review agent-dashboard patterns |
 | `frosted-agent-flow` | `SALVAGE` | Review workflow visualization patterns |
@@ -51,11 +52,10 @@ Central inventory for the `localwolfpackai` GitHub estate.
 | `daily-dose-agent` | `ACTIVE` | Keep as a product; extract its newsletter synthesis pipeline pattern into `lupo-ai-os` |
 | `code-autopsy` | `ACTIVE` | Keep as a product; structured filename-grounded audit schema has been preserved in `lupo-ai-os` |
 | `checklists-and-prompts` | `CONSOLIDATE` | Compare content against `aiuiux-playbooks`, preserve unique metadata and prompts, then propose retirement |
+| `nightowl-prompts` | `CONSOLIDATE` | Preserve prompt taxonomy, command-palette browsing, search/filtering, and local-first storage patterns |
+| `prompts-071525` | `RETIREMENT CANDIDATE` | Inspect code for unique prompt data or UI; otherwise recommend archive as a dated v0 sync shell |
 | `ai-insights` | `INCUBATING` | Clarify boundary versus `aiuiux-playbooks` |
-| `design-intelligence` | `SALVAGE` | Compare with playbooks and preserve unique material |
-| `prompts-071525` | `SALVAGE` | Merge unique prompts into the appropriate library |
-| `nightowl-prompts` | `SALVAGE` | Preserve unique overnight workflows |
-| `visualize-workflow` | `SALVAGE` | Review workflow visualization logic |
+| `design-intelligence` | `REVIEW / THIN EXPERIMENT` | Confirm whether unique design scoring or research logic exists beyond the Gemini AI Studio shell |
 | `fable-automation-ideas` | `INCUBATING` | Keep as an idea backlog or merge into the OS roadmap |
 | `site-contextlup` | `ACTIVE` | Clarify product boundary and role |
 | `stealth-the-lab` | `ACTIVE` | Clarify product boundary and naming |
@@ -63,6 +63,7 @@ Central inventory for the `localwolfpackai` GitHub estate.
 ## Salvage records
 
 - `docs/repo-salvage/2026-07-31-agent-workflow-findings.md` — boundaries and reusable patterns from `claude-config`, `daily-dose-agent`, `code-autopsy`, and `checklists-and-prompts`.
+- `docs/repo-salvage/2026-08-01-prompt-and-visualization-findings.md` — prompt-library overlap and the reusable workflow-visualization pattern.
 
 ## Content and publishing
 
