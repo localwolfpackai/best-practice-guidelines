@@ -22,22 +22,41 @@ This queue converts repository sprawl into a controlled sequence of review, salv
 **Classification:** core destination  
 **Direction:** continue as the main component library and visual catalog.
 
-## Batch 02: design knowledge overlap
+## Batch 02: design knowledge and prompt overlap
 
 ### `aiuiux-playbooks`
 
 **Classification:** active, retain independently  
 **Direction:** destination for normalized design knowledge, prompt kits, findings schemas, and QA checklists.
 
+### `nightowl-prompts`
+
+**Classification:** consolidate candidate  
+**Preserve:** prompt taxonomy, categories/tags/favorites/collections, fast search, command-palette interaction, and local-first persistence model.  
+**Destination:** `aiuiux-playbooks`; non-duplicative catalog interactions may be adapted into `untitled-ui`.  
+**Proposed future name if retained:** `app-nightowl-prompts`.
+
+### `prompts-071525`
+
+**Classification:** retirement candidate after final code inspection  
+**Reason:** dated name and README indicating a v0-synchronized ElitePrompts clone rather than a maintained source of truth.  
+**Preserve before recommendation:** unique prompt records, import/export formats, filters, or original catalog UI.  
+**Proposed future name if retained:** `lab-elite-prompts`.
+
 ### `vivid-uiux-prompt-library`
 
-**Classification:** salvage  
-**Destination:** `aiuiux-playbooks` for design prompts; `lupo-ai-os` for general operating prompts.
+**Classification:** consolidate candidate  
+**Inspect and preserve:** `src/schema.ts`, `src/types.ts`, `src/utils/generatePrompt.ts`, useful analytics models, and genuinely helpful non-developer setup documentation.  
+**Destination:** `aiuiux-playbooks`.  
+**Caution:** treat broad “viral,” community, and production-ready claims as unverified until implementation and tests confirm them.
 
 ### `design-intelligence`
 
-**Classification:** overlap review  
-**Next action:** compare research and scoring logic with the playbooks data model.
+**Classification:** thin experiment under review  
+**Next action:** inspect for unique design scoring, extraction, research, or recommendation logic. If it is only a generated Gemini AI Studio shell, preserve prompts/config and recommend archive.  
+**Proposed future name if retained:** `lab-design-intelligence`.
+
+Detailed provenance: `docs/repo-salvage/2026-08-01-prompt-and-visualization-findings.md`
 
 ## Batch 03: agent and workflow overlap
 
@@ -81,13 +100,23 @@ No consolidation recommended. It has a clear product boundary, tested UI, struct
 
 **Possible clearer name:** `app-code-autopsy`
 
-### Remaining priority order
+## Batch 04: workflow visualization
 
-1. `nightowl-prompts`
-2. `prompts-071525`
-3. `visualize-workflow`
-4. `design-intelligence`
-5. `vivid-uiux-prompt-library`
+### `visualize-workflow`
+
+**Classification:** keep or extract before lifecycle review  
+**High-value material:** `src/components/AiToolsVisualizer.tsx`, four-mode workflow data model, SVG path animation, particle flow, hover prediction overlay, confidence scoring, parallax treatment, dark mode, and 8-point spacing discipline.  
+**Destination:** visual component to `untitled-ui`; workflow schema and operating notes to `lupo-ai-os`.  
+**Required improvements during extraction:** keyboard operation, reduced-motion handling, semantic labels, and responsive verification.  
+**Proposed future name if retained:** `lab-workflow-visualizer`.
+
+## Next priority order
+
+1. Inspect actual files in `prompts-071525`, `vivid-uiux-prompt-library`, and `design-intelligence` to confirm unique implementation.
+2. Extract the `visualize-workflow` component with provenance.
+3. Compare `nightowl-prompts` taxonomy against `aiuiux-playbooks` schemas.
+4. Review `frosted-agent-flow` and `glass-agent-portal` for overlap with the workflow visualizer.
+5. Begin the Plants project-family comparison.
 
 ## Proposed repository labels
 
@@ -114,6 +143,10 @@ Recommended README badges:
 | `daily-dose-agent` | `agent-daily-dose` | Align with purpose-based naming |
 | `code-autopsy` | `app-code-autopsy` | Clarify that it is a runnable product |
 | `design-system-hub-ui` | `lab-design-system-workbench` | Mark as experimental source material if retained |
+| `nightowl-prompts` | `app-nightowl-prompts` | Clarify product type if retained independently |
+| `prompts-071525` | `lab-elite-prompts` | Remove date and identify the actual experiment |
+| `design-intelligence` | `lab-design-intelligence` | Mark the AI Studio project as experimental |
+| `visualize-workflow` | `lab-workflow-visualizer` | Describe its strongest reusable function |
 
 ## Decision gate
 
