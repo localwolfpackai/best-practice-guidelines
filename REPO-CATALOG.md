@@ -11,6 +11,7 @@ Central inventory for the `localwolfpackai` GitHub estate.
 - `SALVAGE`: review for reusable code, design, prompts, or assets
 - `CONSOLIDATE`: preserve unique value, then merge into a stronger destination
 - `REVIEW`: not yet deeply inspected
+- `CLEANUP CANDIDATE`: empty or superseded repository awaiting final checks and user decision
 
 ## Core destinations
 
@@ -54,7 +55,10 @@ Central inventory for the `localwolfpackai` GitHub estate.
 | `checklists-and-prompts` | `CONSOLIDATE` | Compare content against `aiuiux-playbooks`, preserve unique metadata and prompts, then propose retirement |
 | `nightowl-prompts` | `CONSOLIDATE` | Preserve prompt taxonomy, command-palette browsing, search/filtering, and local-first storage patterns |
 | `prompts-071525` | `RETIREMENT CANDIDATE` | Inspect code for unique prompt data or UI; otherwise recommend archive as a dated v0 sync shell |
-| `ai-insights` | `INCUBATING` | Clarify boundary versus `aiuiux-playbooks` |
+| `ai-os` | `CONSOLIDATE` | Preserve workspace taxonomy, naming rules, status board, templates, and distinct brand assets in `lupo-ai-os`; then recommend archive as superseded |
+| `taste` | `INCUBATING` | Define a real agent-taste schema and corpus or preserve the concept in `aiuiux-playbooks` |
+| `ai-insights` | `REVIEW / THIN INCUBATOR` | Inspect 2 KB repository for unique prompts or data models; otherwise consolidate |
+| `social-post` | `CLEANUP CANDIDATE` | Zero-size repository; confirm branch history and integrations before recommending archive or deletion |
 | `design-intelligence` | `REVIEW / THIN EXPERIMENT` | Confirm whether unique design scoring or research logic exists beyond the Gemini AI Studio shell |
 | `fable-automation-ideas` | `INCUBATING` | Keep as an idea backlog or merge into the OS roadmap |
 | `site-contextlup` | `ACTIVE` | Clarify product boundary and role |
@@ -64,6 +68,7 @@ Central inventory for the `localwolfpackai` GitHub estate.
 
 - `docs/repo-salvage/2026-07-31-agent-workflow-findings.md` — boundaries and reusable patterns from `claude-config`, `daily-dose-agent`, `code-autopsy`, and `checklists-and-prompts`.
 - `docs/repo-salvage/2026-08-01-prompt-and-visualization-findings.md` — prompt-library overlap and the reusable workflow-visualization pattern.
+- `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md` — OS consolidation plan and review of `taste`, `ai-insights`, and `social-post`.
 
 ## Content and publishing
 
@@ -75,7 +80,7 @@ Central inventory for the `localwolfpackai` GitHub estate.
 
 ## Remaining review set
 
-`3d-hero`, `ai-campaign-gen`, `canvas-mvp`, `clearview-gemini-nov24`, `film-arc-generator`, `ideaflow-googleaistudio`, `interactive-avatar`, `lh-voice-2-insight`, `margin`, `mm-playbook-01`, `nextjs-clean-website-sanity-template`, `oatmeal`, `ricks-park`, `taste`, `tequila-espresso`, `v0-l0vit-1`, `v0-project-overview-page-design`, and `v0-voice-agent-v1`.
+`3d-hero`, `ai-campaign-gen`, `canvas-mvp`, `clearview-gemini-nov24`, `film-arc-generator`, `ideaflow-googleaistudio`, `interactive-avatar`, `lh-voice-2-insight`, `margin`, `mm-playbook-01`, `nextjs-clean-website-sanity-template`, `oatmeal`, `ricks-park`, `tequila-espresso`, `v0-l0vit-1`, `v0-project-overview-page-design`, and `v0-voice-agent-v1`.
 
 ## Naming system
 
