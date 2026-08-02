@@ -47,8 +47,7 @@ This queue converts repository sprawl into a controlled sequence of review, salv
 
 **Classification:** consolidate candidate  
 **Inspect and preserve:** `src/schema.ts`, `src/types.ts`, `src/utils/generatePrompt.ts`, useful analytics models, and genuinely helpful non-developer setup documentation.  
-**Destination:** `aiuiux-playbooks`.  
-**Caution:** treat broad “viral,” community, and production-ready claims as unverified until implementation and tests confirm them.
+**Destination:** `aiuiux-playbooks`.
 
 ### `design-intelligence`
 
@@ -56,11 +55,7 @@ This queue converts repository sprawl into a controlled sequence of review, salv
 **Next action:** inspect for unique design scoring, extraction, research, or recommendation logic. If it is only a generated Gemini AI Studio shell, preserve prompts/config and recommend archive.  
 **Proposed future name if retained:** `lab-design-intelligence`.
 
-Detailed provenance: `docs/repo-salvage/2026-08-01-prompt-and-visualization-findings.md`
-
 ## Batch 03: agent and workflow overlap
-
-### Completed review
 
 | Repository | Classification | Result |
 |---|---|---|
@@ -68,37 +63,6 @@ Detailed provenance: `docs/repo-salvage/2026-08-01-prompt-and-visualization-find
 | `daily-dose-agent` | `ACTIVE PRODUCT` | Keep; newsletter synthesis workflow queued for extraction |
 | `code-autopsy` | `ACTIVE PRODUCT` | Keep; structured filename-grounded audit schema preserved in `lupo-ai-os` |
 | `checklists-and-prompts` | `CONSOLIDATE CANDIDATE` | Compare prompts and metadata against `aiuiux-playbooks` before retirement decision |
-
-Detailed provenance: `docs/repo-salvage/2026-07-31-agent-workflow-findings.md`
-
-### `checklists-and-prompts` decision gate
-
-Preserve before recommending archive or deletion:
-
-1. Prompts not already represented in `aiuiux-playbooks`.
-2. Difficulty and estimated-time metadata.
-3. Plain-English explanations aimed at non-developers.
-4. Any useful catalog browsing and copy interaction patterns.
-
-**Proposed future name if retained:** `kit-uiux-prompts`
-
-### `daily-dose-agent` extraction target
-
-Create a provider-neutral workflow reference covering:
-
-- newsletter ingestion and cleanup
-- signal ranking and synthesis
-- structured editorial sections
-- brand constants separated from generation logic
-- responsive HTML output and source attribution
-
-**Possible future name:** `agent-daily-dose`
-
-### `code-autopsy` status
-
-No consolidation recommended. It has a clear product boundary, tested UI, structured AI output, and a distinct showcase format.
-
-**Possible clearer name:** `app-code-autopsy`
 
 ## Batch 04: workflow visualization
 
@@ -110,29 +74,50 @@ No consolidation recommended. It has a clear product boundary, tested UI, struct
 **Required improvements during extraction:** keyboard operation, reduced-motion handling, semantic labels, and responsive verification.  
 **Proposed future name if retained:** `lab-workflow-visualizer`.
 
+## Batch 05: OS overlap and thin incubators
+
+### `ai-os`
+
+**Classification:** consolidate, then recommend archive as superseded.  
+**Destination:** `lupo-ai-os`.
+
+Preserve before any lifecycle recommendation:
+
+1. `README.md` function-and-state workspace taxonomy.
+2. `07-ops/NAMING_CONVENTIONS.md` rules not already present in governance docs.
+3. `00-command-center/PROJECT_STATUS.md` as a reusable status-board pattern.
+4. `07-ops/repo-templates/project-starter/` after comparison with current recipes.
+5. Distinct branding or visual assets from `01-brand-studio/site/`.
+
+**Decision gate:** archive recommendation only after the above file-level comparison and provenance-backed extraction are complete.
+
+### `taste`
+
+**Classification:** incubating concept with insufficient implementation.  
+**Preserve:** philosophy of supplying agents with opinionated aesthetic and editorial context.  
+**Destination:** either a real `kit-agent-taste` corpus with schema, or a `taste-context` collection inside `aiuiux-playbooks`.  
+**Cleanup recommendation:** do not keep a shell indefinitely; require a schema and initial corpus before treating it as active.
+
+### `ai-insights`
+
+**Classification:** thin incubator review.  
+**Next action:** inspect all files and compare against `aiuiux-playbooks`, `daily-dose-agent`, and `lupo-ai-os`. Preserve unique prompts or models, then recommend consolidation if no runnable boundary exists.  
+**Proposed future name if retained:** `lab-ai-insights`.
+
+### `social-post`
+
+**Classification:** empty cleanup candidate.  
+**Next action:** confirm branches, history, deployment hooks, and integrations. If all are empty, present a user-approved archive or deletion recommendation. No salvage is currently indicated.
+
+Detailed provenance: `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md`
+
 ## Next priority order
 
-1. Inspect actual files in `prompts-071525`, `vivid-uiux-prompt-library`, and `design-intelligence` to confirm unique implementation.
-2. Extract the `visualize-workflow` component with provenance.
-3. Compare `nightowl-prompts` taxonomy against `aiuiux-playbooks` schemas.
-4. Review `frosted-agent-flow` and `glass-agent-portal` for overlap with the workflow visualizer.
+1. Perform the file-level `ai-os` → `lupo-ai-os` comparison and preserve non-duplicative operating architecture.
+2. Inspect `ai-insights` and branch history for `social-post`.
+3. Extract the `visualize-workflow` component with provenance.
+4. Compare `nightowl-prompts` taxonomy against `aiuiux-playbooks` schemas.
 5. Begin the Plants project-family comparison.
-
-## Proposed repository labels
-
-GitHub repository topics should use a small controlled vocabulary:
-
-- Lifecycle: `active`, `incubating`, `reference`, `client`, `legacy`
-- Domain: `design-system`, `ai-agent`, `automation`, `content`, `portfolio`, `plants`, `client-work`
-- Stack: `nextjs`, `react`, `vite`, `tailwind`, `typescript`, `python`, `swiftui`
-- Brand: `lupo-studios`, `humanlup`, `lupos`
-
-Recommended README badges:
-
-- lifecycle status
-- primary stack
-- build or verification status
-- destination or superseded-by link where applicable
 
 ## Proposed rename queue
 
@@ -147,6 +132,8 @@ Recommended README badges:
 | `prompts-071525` | `lab-elite-prompts` | Remove date and identify the actual experiment |
 | `design-intelligence` | `lab-design-intelligence` | Mark the AI Studio project as experimental |
 | `visualize-workflow` | `lab-workflow-visualizer` | Describe its strongest reusable function |
+| `taste` | `kit-agent-taste` | Clarify reusable agent-context purpose if implemented |
+| `ai-insights` | `lab-ai-insights` | Mark as experimental until a product boundary exists |
 
 ## Decision gate
 
