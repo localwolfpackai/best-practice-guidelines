@@ -78,18 +78,17 @@ This queue converts repository sprawl into a controlled sequence of review, salv
 
 ### `ai-os`
 
-**Classification:** consolidate, then recommend archive as superseded.  
+**Classification:** reusable work preserved; ready for a user-approved lifecycle decision.  
 **Destination:** `lupo-ai-os`.
 
-Preserve before any lifecycle recommendation:
+Preserved with file-level provenance in `docs/operating-model/project-lifecycle-and-structure.md`:
 
-1. `README.md` function-and-state workspace taxonomy.
-2. `07-ops/NAMING_CONVENTIONS.md` rules not already present in governance docs.
-3. `00-command-center/PROJECT_STATUS.md` as a reusable status-board pattern.
-4. `07-ops/repo-templates/project-starter/` after comparison with current recipes.
-5. Distinct branding or visual assets from `01-brand-studio/site/`.
+1. Function-first workspace taxonomy from `README.md`.
+2. Naming guidance from `07-ops/NAMING_CONVENTIONS.md`.
+3. Shared lifecycle definitions and the active-status decision rule from `00-command-center/PROJECT_STATUS.md`.
+4. Project starter structure and checklist from `07-ops/repo-templates/project-starter/README.md`.
 
-**Decision gate:** archive recommendation only after the above file-level comparison and provenance-backed extraction are complete.
+**Recommendation:** archive `ai-os` as superseded after confirming there are no active deployments, non-default branches, or unpreserved brand assets. Do not delete it; the commit history remains useful provenance.
 
 ### `taste`
 
@@ -109,11 +108,11 @@ Preserve before any lifecycle recommendation:
 **Classification:** empty cleanup candidate.  
 **Next action:** confirm branches, history, deployment hooks, and integrations. If all are empty, present a user-approved archive or deletion recommendation. No salvage is currently indicated.
 
-Detailed provenance: `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md`
+Detailed provenance: `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md` and `docs/operating-model/project-lifecycle-and-structure.md`.
 
 ## Next priority order
 
-1. Perform the file-level `ai-os` → `lupo-ai-os` comparison and preserve non-duplicative operating architecture.
+1. Confirm `ai-os` branch and deployment state, then place the archive recommendation before the user.
 2. Inspect `ai-insights` and branch history for `social-post`.
 3. Extract the `visualize-workflow` component with provenance.
 4. Compare `nightowl-prompts` taxonomy against `aiuiux-playbooks` schemas.
