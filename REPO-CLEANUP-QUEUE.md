@@ -4,117 +4,107 @@ This queue converts repository sprawl into a controlled sequence of review, salv
 
 ## Batch 01: component and design-system overlap
 
-### `design-system-hub-ui`
-
-**Classification:** salvage, then lifecycle review  
-**High-value material:** catalog navigation, design foundations, writing-style documentation, and inspection-panel concepts.  
-**Destination:** `untitled-ui`  
-**Proposed future name if retained:** `lab-design-system-workbench`
-
-### `nextui-component-library`
-
-**Classification:** thin generated shell under review  
-**Next action:** inspect repository tree and deployment linkage. If no unique work exists, prepare a retirement recommendation.  
-**Proposed future name if retained:** `lab-v0-component-sync`
-
-### `untitled-ui`
-
-**Classification:** core destination  
-**Direction:** continue as the main component library and visual catalog.
+| Repository | Classification | Direction |
+|---|---|---|
+| `untitled-ui` | `CORE` | Main component library and visual catalog |
+| `design-system-hub-ui` | `SALVAGE` | Extract catalog navigation, token presentation, and inspection-panel concepts into `untitled-ui` |
+| `nextui-component-library` | `REVIEW` | Inspect tree and deployment linkage; recommend retirement if it is only a generated shell |
 
 ## Batch 02: design knowledge and prompt overlap
 
-### `aiuiux-playbooks`
-
-**Classification:** active, retain independently  
-**Direction:** destination for normalized design knowledge, prompt kits, findings schemas, and QA checklists.
-
-### `nightowl-prompts`
-
-**Classification:** consolidate candidate  
-**Preserve:** prompt taxonomy, categories/tags/favorites/collections, fast search, command-palette interaction, and local-first persistence model.  
-**Destination:** `aiuiux-playbooks`; non-duplicative catalog interactions may be adapted into `untitled-ui`.  
-**Proposed future name if retained:** `app-nightowl-prompts`.
-
-### `prompts-071525`
-
-**Classification:** retirement candidate after final code inspection  
-**Reason:** dated name and README indicating a v0-synchronized ElitePrompts clone rather than a maintained source of truth.  
-**Preserve before recommendation:** unique prompt records, import/export formats, filters, or original catalog UI.  
-**Proposed future name if retained:** `lab-elite-prompts`.
-
-### `vivid-uiux-prompt-library`
-
-**Classification:** consolidate candidate  
-**Inspect and preserve:** `src/schema.ts`, `src/types.ts`, `src/utils/generatePrompt.ts`, useful analytics models, and genuinely helpful non-developer setup documentation.  
-**Destination:** `aiuiux-playbooks`.
-
-### `design-intelligence`
-
-**Classification:** thin experiment under review  
-**Next action:** inspect for unique design scoring, extraction, research, or recommendation logic. If it is only a generated Gemini AI Studio shell, preserve prompts/config and recommend archive.  
-**Proposed future name if retained:** `lab-design-intelligence`.
+| Repository | Classification | Direction |
+|---|---|---|
+| `aiuiux-playbooks` | `ACTIVE DESTINATION` | Normalized design knowledge, prompt kits, findings schemas, and QA checklists |
+| `nightowl-prompts` | `CONSOLIDATE` | Preserve taxonomy, search, favorites, collections, command palette, and local-first persistence |
+| `prompts-071525` | `RETIREMENT CANDIDATE` | Inspect unique prompt records, import/export formats, filters, and original UI before recommending archive |
+| `vivid-uiux-prompt-library` | `CONSOLIDATE` | Preserve schema, types, prompt generation logic, useful analytics models, and non-developer setup guidance |
+| `design-intelligence` | `THIN EXPERIMENT` | Inspect for unique scoring, extraction, research, or recommendation logic |
 
 ## Batch 03: agent and workflow overlap
 
 | Repository | Classification | Result |
 |---|---|---|
-| `claude-config` | `CORE SUPPORT` | Keep separate; boundary and backup policy documented |
-| `daily-dose-agent` | `ACTIVE PRODUCT` | Keep; newsletter synthesis workflow queued for extraction |
-| `code-autopsy` | `ACTIVE PRODUCT` | Keep; structured filename-grounded audit schema preserved in `lupo-ai-os` |
-| `checklists-and-prompts` | `CONSOLIDATE CANDIDATE` | Compare prompts and metadata against `aiuiux-playbooks` before retirement decision |
+| `claude-config` | `CORE SUPPORT` | Keep separate; deployed Claude Code configuration source of truth |
+| `daily-dose-agent` | `ACTIVE PRODUCT` | Keep; newsletter synthesis workflow remains queued for extraction |
+| `code-autopsy` | `ACTIVE PRODUCT` | Keep; filename-grounded audit schema preserved in `lupo-ai-os` |
+| `checklists-and-prompts` | `CONSOLIDATE` | Compare prompts and metadata against `aiuiux-playbooks` before retirement decision |
 
 ## Batch 04: workflow visualization
 
 ### `visualize-workflow`
 
 **Classification:** keep or extract before lifecycle review  
-**High-value material:** `src/components/AiToolsVisualizer.tsx`, four-mode workflow data model, SVG path animation, particle flow, hover prediction overlay, confidence scoring, parallax treatment, dark mode, and 8-point spacing discipline.  
+**Preserve:** `src/components/AiToolsVisualizer.tsx`, four-mode workflow data, SVG path animation, particle flow, prediction overlay, confidence scoring, parallax treatment, dark mode, and 8-point spacing discipline.  
 **Destination:** visual component to `untitled-ui`; workflow schema and operating notes to `lupo-ai-os`.  
-**Required improvements during extraction:** keyboard operation, reduced-motion handling, semantic labels, and responsive verification.  
-**Proposed future name if retained:** `lab-workflow-visualizer`.
+**Required improvements:** keyboard operation, reduced-motion handling, semantic labels, and responsive verification.  
+**Proposed future name:** `lab-workflow-visualizer`.
 
 ## Batch 05: OS overlap and thin incubators
 
 ### `ai-os`
 
 **Classification:** reusable work preserved; ready for a user-approved lifecycle decision.  
-**Destination:** `lupo-ai-os`.
-
-Preserved with file-level provenance in `docs/operating-model/project-lifecycle-and-structure.md`:
-
-1. Function-first workspace taxonomy from `README.md`.
-2. Naming guidance from `07-ops/NAMING_CONVENTIONS.md`.
-3. Shared lifecycle definitions and the active-status decision rule from `00-command-center/PROJECT_STATUS.md`.
-4. Project starter structure and checklist from `07-ops/repo-templates/project-starter/README.md`.
-
-**Recommendation:** archive `ai-os` as superseded after confirming there are no active deployments, non-default branches, or unpreserved brand assets. Do not delete it; the commit history remains useful provenance.
+**Preserved in:** `docs/operating-model/project-lifecycle-and-structure.md`.  
+**Recommendation:** archive as superseded after checking deployments, non-default branches, and remaining brand assets. Preserve commit history.
 
 ### `taste`
 
 **Classification:** incubating concept with insufficient implementation.  
-**Preserve:** philosophy of supplying agents with opinionated aesthetic and editorial context.  
-**Destination:** either a real `kit-agent-taste` corpus with schema, or a `taste-context` collection inside `aiuiux-playbooks`.  
-**Cleanup recommendation:** do not keep a shell indefinitely; require a schema and initial corpus before treating it as active.
+**Direction:** create a real `kit-agent-taste` schema and starter corpus or preserve the concept inside `aiuiux-playbooks`. Do not keep an empty shell indefinitely.
 
 ### `ai-insights`
 
-**Classification:** thin incubator review.  
-**Next action:** inspect all files and compare against `aiuiux-playbooks`, `daily-dose-agent`, and `lupo-ai-os`. Preserve unique prompts or models, then recommend consolidation if no runnable boundary exists.  
-**Proposed future name if retained:** `lab-ai-insights`.
+**Classification:** reusable work preserved; consolidation candidate.
+
+Recovered from commit history:
+
+- multi-stage Claude orchestration
+- initial framing node
+- parallel specialist fan-out
+- context-packet resolution and submission
+- fan-in merge with a token budget
+
+Preserved and normalized in:
+
+- `docs/workflows/fan-out-fan-in-agent-pipeline.md`
+
+Provenance:
+
+- source commit: `999a1a33d4b9bc500a3639b8872b22fb48874fd2`
+- original path: `claude-code/responses/2026-04-21_orchestrator-pipeline-template.sh`
+
+Safety improvements during salvage:
+
+- removed a machine-specific absolute path
+- replaced deletion of shared state with an isolated temporary run directory
+- added node contracts, failure guidance, cleanup traps, and portability rules
+
+**Next gate:** inspect non-default branches and integrations. If no additional unique work exists, recommend archiving `ai-insights` as superseded by `lupo-ai-os`. Do not delete it.
 
 ### `social-post`
 
 **Classification:** empty cleanup candidate.  
-**Next action:** confirm branches, history, deployment hooks, and integrations. If all are empty, present a user-approved archive or deletion recommendation. No salvage is currently indicated.
+**Next action:** confirm branches, history, deployment hooks, and integrations. If empty, present user-approved archive or deletion options.
 
-Detailed provenance: `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md` and `docs/operating-model/project-lifecycle-and-structure.md`.
+## Plants project family
+
+Repositories: `photosynthesis-site`, `plant-species-app`, `plant-universe-experiment`, `plants-intro-hero`, and `v0-plants-interactive-gallery`.
+
+Before selecting a primary destination, compare:
+
+- distinctive illustrations and image assets
+- plant data schemas and species content
+- hero and gallery interactions
+- responsive behavior and accessibility
+- deployment state and external integrations
+
+No member should be retired until unique assets and interactions are preserved with provenance.
 
 ## Next priority order
 
-1. Confirm `ai-os` branch and deployment state, then place the archive recommendation before the user.
-2. Inspect `ai-insights` and branch history for `social-post`.
-3. Extract the `visualize-workflow` component with provenance.
+1. Confirm `ai-insights` and `ai-os` branch and integration state; prepare archive recommendations if clean.
+2. Inspect branch history and integrations for `social-post`.
+3. Extract the accessible `visualize-workflow` component with provenance.
 4. Compare `nightowl-prompts` taxonomy against `aiuiux-playbooks` schemas.
 5. Begin the Plants project-family comparison.
 
@@ -122,17 +112,17 @@ Detailed provenance: `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md` 
 
 | Current | Proposed | Reason |
 |---|---|---|
-| `untitled-ui` | `lupos-ui` or `kit-lupos-ui` | Replace temporary naming with owned design-system identity |
+| `untitled-ui` | `lupos-ui` or `kit-lupos-ui` | Replace temporary naming with an owned design-system identity |
 | `checklists-and-prompts` | `kit-uiux-prompts` | Clarify reusable reference purpose if retained |
 | `daily-dose-agent` | `agent-daily-dose` | Align with purpose-based naming |
 | `code-autopsy` | `app-code-autopsy` | Clarify that it is a runnable product |
-| `design-system-hub-ui` | `lab-design-system-workbench` | Mark as experimental source material if retained |
+| `design-system-hub-ui` | `lab-design-system-workbench` | Mark experimental source material clearly |
 | `nightowl-prompts` | `app-nightowl-prompts` | Clarify product type if retained independently |
-| `prompts-071525` | `lab-elite-prompts` | Remove date and identify the actual experiment |
+| `prompts-071525` | `lab-elite-prompts` | Remove the date and identify the experiment |
 | `design-intelligence` | `lab-design-intelligence` | Mark the AI Studio project as experimental |
 | `visualize-workflow` | `lab-workflow-visualizer` | Describe its strongest reusable function |
 | `taste` | `kit-agent-taste` | Clarify reusable agent-context purpose if implemented |
-| `ai-insights` | `lab-ai-insights` | Mark as experimental until a product boundary exists |
+| `ai-insights` | `lab-ai-insights` | Use only if retained; current recommendation is consolidation after final checks |
 
 ## Decision gate
 
@@ -141,7 +131,7 @@ A repository is ready for a user decision only after:
 - unique assets and code have been inspected
 - reusable material has been copied or intentionally left in place
 - provenance has been documented
-- dependencies and deployment links have been checked
+- dependencies, branches, and deployment links have been checked
 - a recommended destination and name have been recorded
 
-No repository is renamed, archived, or removed by this workflow.
+No repository is renamed, archived, deleted, or removed automatically.
