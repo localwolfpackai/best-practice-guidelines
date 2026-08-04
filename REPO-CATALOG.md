@@ -61,9 +61,9 @@ Central inventory for the `localwolfpackai` GitHub estate.
 | `checklists-and-prompts` | `CONSOLIDATE` | Compare content against `aiuiux-playbooks`, preserve unique metadata and prompts, then propose retirement |
 | `nightowl-prompts` | `CONSOLIDATE` | Preserve prompt taxonomy, command-palette browsing, search/filtering, and local-first storage patterns |
 | `prompts-071525` | `RETIREMENT CANDIDATE` | Inspect code for unique prompt data or UI; otherwise recommend archive as a dated v0 sync shell |
-| `ai-os` | `READY FOR LIFECYCLE DECISION` | Function-first taxonomy, lifecycle model, naming guidance, status rule, and project starter are preserved in `lupo-ai-os`; recommend archive as superseded after deployment and branch checks |
+| `ai-os` | `READY FOR LIFECYCLE DECISION` | Operating model preserved in `lupo-ai-os`; recommend archive as superseded after deployment and branch checks |
 | `taste` | `INCUBATING` | Define a real agent-taste schema and corpus or preserve the concept in `aiuiux-playbooks` |
-| `ai-insights` | `REVIEW / THIN INCUBATOR` | Inspect 2 KB repository for unique prompts or data models; otherwise consolidate |
+| `ai-insights` | `SALVAGED / CONSOLIDATE` | Fan-out/fan-in Claude pipeline recovered from commit history and normalized in `lupo-ai-os`; check branches/integrations, then recommend archive as superseded |
 | `social-post` | `CLEANUP CANDIDATE` | Zero-size repository; confirm branch history and integrations before recommending archive or deletion |
 | `design-intelligence` | `REVIEW / THIN EXPERIMENT` | Confirm whether unique design scoring or research logic exists beyond the Gemini AI Studio shell |
 | `fable-automation-ideas` | `INCUBATING` | Keep as an idea backlog or merge into the OS roadmap |
@@ -75,7 +75,8 @@ Central inventory for the `localwolfpackai` GitHub estate.
 - `docs/repo-salvage/2026-07-31-agent-workflow-findings.md` — boundaries and reusable patterns from `claude-config`, `daily-dose-agent`, `code-autopsy`, and `checklists-and-prompts`.
 - `docs/repo-salvage/2026-08-01-prompt-and-visualization-findings.md` — prompt-library overlap and the reusable workflow-visualization pattern.
 - `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md` — OS consolidation plan and review of `taste`, `ai-insights`, and `social-post`.
-- `docs/operating-model/project-lifecycle-and-structure.md` — normalized function-first workspace model, lifecycle states, naming guidance, and project starter salvaged from `ai-os` with file-level provenance.
+- `docs/operating-model/project-lifecycle-and-structure.md` — normalized workspace model salvaged from `ai-os` with file-level provenance.
+- `docs/workflows/fan-out-fan-in-agent-pipeline.md` — portable, safer multi-stage orchestration pattern recovered from `ai-insights` commit history.
 
 ## Content and publishing
 
