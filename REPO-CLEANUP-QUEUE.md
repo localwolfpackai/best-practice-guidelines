@@ -86,6 +86,30 @@ Safety improvements during salvage:
 **Classification:** empty cleanup candidate.  
 **Next action:** confirm branches, history, deployment hooks, and integrations. If empty, present user-approved archive or deletion options.
 
+## Batch 06: Margie real-estate repository family
+
+### Operating boundary
+
+| Repository | Classification | Direction |
+|---|---|---|
+| `margielupo-com` | `CLIENT / PRODUCTION` | Keep as the only deployable public-site source of truth; do not use as the experimental OS workspace |
+| `margielupo-docs` | `CLIENT / AUTHORITY HUB` | Keep strategy, SEO, brand knowledge, deliverables, and backup policy authoritative here |
+| `margie-social-studio` | `SALVAGE / PRODUCT PROTOTYPE` | Preserve content library, scheduler, previews, analytics, hooks, and Brentwood data for future `margie-os` |
+| `margielupo-1` | `ARCHIVED / SALVAGE` | Review AI chat, valuation, market pulse, neighborhood explorer, knowledge-base, and Supabase patterns before confirming continued archive status |
+| future `margie-os` | `PROPOSED DESTINATION` | New independent editorial operating system with mocked data first; no production dependency during MVP |
+
+**Preserved analysis:** `docs/repo-salvage/2026-08-05-margie-repository-family.md`.
+
+**Safe next actions:**
+
+1. inspect non-default branches and deployment integrations for all four existing repositories
+2. inventory file-level reusable material in `margie-social-studio` and `margielupo-1`
+3. define a provenance manifest before copying code or assets
+4. create `margie-os` only as an independent repository
+5. keep Google Drive, AI generation, authentication, and live publishing out of the first milestone
+
+**Lifecycle position:** no current Margie repository is ready for deletion. `margielupo-1` should remain archived until unique assets are verified. `margie-social-studio` should remain available until its useful patterns are preserved.
+
 ## Plants project family
 
 Repositories: `photosynthesis-site`, `plant-species-app`, `plant-universe-experiment`, `plants-intro-hero`, and `v0-plants-interactive-gallery`.
@@ -102,11 +126,12 @@ No member should be retired until unique assets and interactions are preserved w
 
 ## Next priority order
 
-1. Confirm `ai-insights` and `ai-os` branch and integration state; prepare archive recommendations if clean.
-2. Inspect branch history and integrations for `social-post`.
-3. Extract the accessible `visualize-workflow` component with provenance.
-4. Compare `nightowl-prompts` taxonomy against `aiuiux-playbooks` schemas.
-5. Begin the Plants project-family comparison.
+1. Inventory file-level reusable patterns in `margie-social-studio` and `margielupo-1`; keep the production and docs repositories untouched.
+2. Confirm `ai-insights` and `ai-os` branch and integration state; prepare archive recommendations if clean.
+3. Inspect branch history and integrations for `social-post`.
+4. Extract the accessible `visualize-workflow` component with provenance.
+5. Compare `nightowl-prompts` taxonomy against `aiuiux-playbooks` schemas.
+6. Begin the Plants project-family comparison.
 
 ## Proposed rename queue
 
@@ -123,6 +148,8 @@ No member should be retired until unique assets and interactions are preserved w
 | `visualize-workflow` | `lab-workflow-visualizer` | Describe its strongest reusable function |
 | `taste` | `kit-agent-taste` | Clarify reusable agent-context purpose if implemented |
 | `ai-insights` | `lab-ai-insights` | Use only if retained; current recommendation is consolidation after final checks |
+| `margielupo-docs` | `margie-workspace` | Optional only; better reflects authority-hub role, but requires local-path and automation checks |
+| `margie-social-studio` | `lab-margie-social-studio` | Optional after salvage; makes prototype status explicit |
 
 ## Decision gate
 
