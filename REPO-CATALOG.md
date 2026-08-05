@@ -34,6 +34,18 @@ Central inventory for the `localwolfpackai` GitHub estate.
 
 `bumperdoc-santee`, `margielupo-com`, `margielupo-docs`, `margie-social-studio`, `guyfox-seo`, `meesh-fullsite`, and `tradition-x` remain separate. Reusable patterns may be copied out with source attribution.
 
+## Margie repository family
+
+| Repository | Status | Boundary and direction |
+|---|---|---|
+| `margielupo-com` | `CLIENT / PRODUCTION` | Only deployable public-site source of truth; keep the Next.js + MDX publishing workflow isolated |
+| `margielupo-docs` | `CLIENT / AUTHORITY HUB` | Strategy, SEO, brand knowledge, project map, deliverables, and backup policy; keep separate from deployment |
+| `margie-social-studio` | `SALVAGE / PRODUCT PROTOTYPE` | Preserve content library, scheduler, platform previews, analytics patterns, and Brentwood data for a future independent `margie-os` |
+| `margielupo-1` | `ARCHIVED / SALVAGE` | Historical Lovable/Vite predecessor; inspect unique AI chat, valuation, market pulse, neighborhood, and knowledge-base assets before any further lifecycle decision |
+| future `margie-os` | `PROPOSED DESTINATION` | New independent internal editorial operating system; must not modify or depend on the production site during MVP |
+
+Detailed provenance and decision gates: `docs/repo-salvage/2026-08-05-margie-repository-family.md`.
+
 ## Design and UI repositories
 
 | Repository | Status | Direction |
@@ -75,6 +87,7 @@ Central inventory for the `localwolfpackai` GitHub estate.
 - `docs/repo-salvage/2026-07-31-agent-workflow-findings.md` — boundaries and reusable patterns from `claude-config`, `daily-dose-agent`, `code-autopsy`, and `checklists-and-prompts`.
 - `docs/repo-salvage/2026-08-01-prompt-and-visualization-findings.md` — prompt-library overlap and the reusable workflow-visualization pattern.
 - `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md` — OS consolidation plan and review of `taste`, `ai-insights`, and `social-post`.
+- `docs/repo-salvage/2026-08-05-margie-repository-family.md` — production, authority-hub, social-prototype, archived-predecessor, and future Margie OS boundaries.
 - `docs/operating-model/project-lifecycle-and-structure.md` — normalized workspace model salvaged from `ai-os` with file-level provenance.
 - `docs/workflows/fan-out-fan-in-agent-pipeline.md` — portable, safer multi-stage orchestration pattern recovered from `ai-insights` commit history.
 
