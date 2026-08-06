@@ -1,12 +1,14 @@
 # Repository Catalog
 
-Central inventory for the `localwolfpackai` GitHub estate.
+Central inventory and disposition map for the `localwolfpackai` GitHub estate.
 
 ## Inventory snapshot
 
 - Repositories inventoried: **64**
-- Archived repositories included: **yes**
-- Repositories automatically renamed, archived, or deleted: **0**
+- Archived: **26**
+- Active: **38**
+- Automatically renamed, archived, or deleted: **0**
+- Last focused review: **2026-08-06 — Margie content workflow salvage**
 
 ## Status vocabulary
 
@@ -14,107 +16,122 @@ Central inventory for the `localwolfpackai` GitHub estate.
 - `ACTIVE`: current project with a clear purpose
 - `INCUBATING`: experiment still being evaluated
 - `CLIENT`: client-specific work
-- `SALVAGE`: review for reusable code, design, prompts, or assets
+- `SALVAGE`: inspect for reusable code, design, prompts, docs, or assets
 - `CONSOLIDATE`: preserve unique value, then merge into a stronger destination
-- `REVIEW`: not yet deeply inspected
-- `CLEANUP CANDIDATE`: empty or superseded repository awaiting final checks and user decision
+- `REVIEW`: not deeply inspected yet
+- `CLEANUP CANDIDATE`: empty or superseded after final checks and user decision
 
 ## Core destinations
 
 | Repository | Purpose | Status |
 |---|---|---|
-| `untitled-ui` | Design system, component library, and visual showcase | `CORE` |
-| `lupo-ai-os` | Agent workflows, operating documentation, repo governance, and salvage provenance | `CORE` |
-| `claude-config` | Versioned live Claude Code configuration, rules, skills, hooks, and backup policy | `CORE SUPPORT` |
-| `aiuiux-playbooks` | Structured design findings, prompt kits, and QA playbooks | `ACTIVE` |
+| `untitled-ui` | Active design system, component library, and showcase | `CORE` |
+| `lupo-ai-os` | Operating documentation, repo governance, workflows, and salvage provenance | `CORE` |
+| `claude-config` | Live Claude Code configuration, rules, skills, hooks, and backup policy | `CORE SUPPORT` |
+| `aiuiux-playbooks` | Design findings, prompt kits, and QA playbooks | `ACTIVE` |
 | `lupo-portfolio` | Portfolio and proof of work | `ACTIVE` |
 | `sessions-and-lessons` | Durable learning record | `ACTIVE` |
 
-## Client work
+## Client repositories
 
-`bumperdoc-santee`, `margielupo-com`, `margielupo-docs`, `margie-social-studio`, `guyfox-seo`, `meesh-fullsite`, and `tradition-x` remain separate. Reusable patterns may be copied out with source attribution.
+Keep client work isolated: `bumperdoc-santee`, `margielupo-com`, `margielupo-docs`, `margie-social-studio`, `guyfox-seo`, `meesh-fullsite`, and `tradition-x`. Reusable patterns may be copied out only with provenance.
 
-## Margie repository family
+### Margie family
 
 | Repository | Status | Boundary and direction |
 |---|---|---|
-| `margielupo-com` | `CLIENT / PRODUCTION` | Only deployable public-site source of truth; keep the Next.js + MDX publishing workflow isolated |
-| `margielupo-docs` | `CLIENT / AUTHORITY HUB` | Strategy, SEO, brand knowledge, project map, deliverables, and backup policy; keep separate from deployment |
-| `margie-social-studio` | `SALVAGE / PRODUCT PROTOTYPE` | Preserve content library, scheduler, platform previews, analytics patterns, and Brentwood data for a future independent `margie-os` |
-| `margielupo-1` | `ARCHIVED / SALVAGE` | Historical Lovable/Vite predecessor; inspect unique AI chat, valuation, market pulse, neighborhood, and knowledge-base assets before any further lifecycle decision |
-| future `margie-os` | `PROPOSED DESTINATION` | New independent internal editorial operating system; must not modify or depend on the production site during MVP |
+| `margielupo-com` | `CLIENT / PRODUCTION` | Only deployable public-site source of truth; keep isolated |
+| `margielupo-docs` | `CLIENT / AUTHORITY HUB` | Strategy, SEO, brand knowledge, project map, and deliverables |
+| `margie-social-studio` | `SALVAGE / PRODUCT PROTOTYPE` | Preserve workflow models, library, previews, analytics, scheduler, and Brentwood utilities for future `margie-os` |
+| `margielupo-1` | `ARCHIVED / SALVAGE` | Preserve unique AI knowledge, valuation, market, neighborhood, and asset concepts before any further decision |
+| future `margie-os` | `PROPOSED DESTINATION` | Independent internal editorial OS; mocked data first; no production dependency |
 
-Detailed provenance and decision gates: `docs/repo-salvage/2026-08-05-margie-repository-family.md`.
+The first file-level manifest is documented in `docs/repo-salvage/2026-08-06-margie-content-workflow-manifest.md`. It preserves scheduling semantics and calendar interaction patterns while explicitly rejecting wholesale migration of the old Vite/shadcn implementations.
 
-## Design and UI repositories
+## Design and UI family
 
 | Repository | Status | Direction |
 |---|---|---|
-| `design-system-hub-ui` | `SALVAGE` | Extract catalog navigation, token presentation, and preview concepts into `untitled-ui` |
-| `nextui-component-library` | `REVIEW` | Thin v0 synchronization shell; verify whether it contains unique implementation |
-| `visual-canvas` | `INCUBATING` | Review for preview and canvas patterns |
+| `untitled-ui` | `CORE` | Destination for durable primitives, application components, and showcases |
+| `design-system-hub-ui` | `SALVAGE` | Extract catalog navigation, token presentation, and inspection concepts |
+| `nextui-component-library` | `REVIEW` | Verify whether it contains unique implementation beyond a generated shell |
+| `visual-canvas` | `INCUBATING` | Review preview and canvas patterns |
 | `geist-pixel-studio` | `INCUBATING` | Review typography and pixel-system assets |
-| `vivid-uiux-prompt-library` | `CONSOLIDATE` | Verify schema and generator code, then move durable prompt patterns into `aiuiux-playbooks` |
-| `visualize-workflow` | `SALVAGE / KEEP` | Preserve SVG workflow visualization and interaction model; extract to `untitled-ui` before any lifecycle decision |
-| `v0-darkloops` | `SALVAGE` | Review reusable visual loops and components |
+| `visualize-workflow` | `SALVAGE / KEEP` | Extract accessible workflow visualization and schema |
+| `v0-darkloops` | `SALVAGE` | Review visual loops and reusable motion patterns |
 | `glass-agent-portal` | `SALVAGE` | Review agent-dashboard patterns |
 | `frosted-agent-flow` | `SALVAGE` | Review workflow visualization patterns |
 | `ai-studio-revamp` | `SALVAGE` | Review layouts and visual assets |
 | `lupo-craft` | `SALVAGE` | Review editor and craft patterns |
 | `lupo-engine` | `SALVAGE` | Review architecture and utilities |
+| `vivid-uiux-prompt-library` | `CONSOLIDATE` | Move durable schemas and generator logic into `aiuiux-playbooks` |
 
-## AI systems and workflow repositories
+## AI, prompts, and workflow family
 
 | Repository | Status | Direction |
 |---|---|---|
-| `claude-config` | `CORE SUPPORT` | Keep separate; it is the deployed Claude Code configuration source of truth |
-| `daily-dose-agent` | `ACTIVE` | Keep as a product; extract its newsletter synthesis pipeline pattern into `lupo-ai-os` |
-| `code-autopsy` | `ACTIVE` | Keep as a product; structured filename-grounded audit schema has been preserved in `lupo-ai-os` |
-| `checklists-and-prompts` | `CONSOLIDATE` | Compare content against `aiuiux-playbooks`, preserve unique metadata and prompts, then propose retirement |
-| `nightowl-prompts` | `CONSOLIDATE` | Preserve prompt taxonomy, command-palette browsing, search/filtering, and local-first storage patterns |
-| `prompts-071525` | `RETIREMENT CANDIDATE` | Inspect code for unique prompt data or UI; otherwise recommend archive as a dated v0 sync shell |
-| `ai-os` | `READY FOR LIFECYCLE DECISION` | Operating model preserved in `lupo-ai-os`; recommend archive as superseded after deployment and branch checks |
-| `taste` | `INCUBATING` | Define a real agent-taste schema and corpus or preserve the concept in `aiuiux-playbooks` |
-| `ai-insights` | `SALVAGED / CONSOLIDATE` | Fan-out/fan-in Claude pipeline recovered from commit history and normalized in `lupo-ai-os`; check branches/integrations, then recommend archive as superseded |
-| `social-post` | `CLEANUP CANDIDATE` | Zero-size repository; confirm branch history and integrations before recommending archive or deletion |
-| `design-intelligence` | `REVIEW / THIN EXPERIMENT` | Confirm whether unique design scoring or research logic exists beyond the Gemini AI Studio shell |
-| `fable-automation-ideas` | `INCUBATING` | Keep as an idea backlog or merge into the OS roadmap |
-| `site-contextlup` | `ACTIVE` | Clarify product boundary and role |
-| `stealth-the-lab` | `ACTIVE` | Clarify product boundary and naming |
+| `daily-dose-agent` | `ACTIVE PRODUCT` | Keep; extract newsletter synthesis pipeline pattern |
+| `code-autopsy` | `ACTIVE PRODUCT` | Keep; audit schema already preserved in `lupo-ai-os` |
+| `checklists-and-prompts` | `CONSOLIDATE` | Compare against `aiuiux-playbooks`, preserve unique metadata, then propose retirement |
+| `nightowl-prompts` | `CONSOLIDATE` | Preserve taxonomy, command palette, search/filtering, and local-first storage |
+| `prompts-071525` | `RETIREMENT CANDIDATE` | Inspect unique prompt data and UI before recommending archive |
+| `ai-os` | `READY FOR DECISION` | Operating model preserved; check branches/deployments, then recommend archive as superseded |
+| `ai-insights` | `SALVAGED / CONSOLIDATE` | Fan-out/fan-in Claude pipeline recovered and normalized; check branches/integrations |
+| `taste` | `INCUBATING` | Implement a real agent-taste schema or preserve the concept in playbooks |
+| `social-post` | `CLEANUP CANDIDATE` | Zero-size repository; verify history and integrations |
+| `design-intelligence` | `REVIEW / THIN EXPERIMENT` | Confirm unique scoring or research logic |
+| `fable-automation-ideas` | `INCUBATING` | Keep as roadmap material or merge into OS backlog |
+| `site-contextlup` | `ACTIVE / BOUNDARY REVIEW` | Clarify product purpose |
+| `stealth-the-lab` | `ACTIVE / BOUNDARY REVIEW` | Clarify product purpose and naming |
+
+## Plants family
+
+`photosynthesis-site`, `plant-species-app`, `plant-universe-experiment`, `plants-intro-hero`, and `v0-plants-interactive-gallery` overlap. Preserve unique plant data, illustrations, hero/gallery interactions, and responsive patterns before selecting a primary destination.
+
+## Publishing and knowledge surfaces
+
+Active publishing or knowledge repositories: `brand-sessions`, `docs`, `the-field-notebook`, `sessions-and-lessons`, `localwolfpackai`, and `claude-chrome-vault`.
+
+Review for durable content or clearer boundaries: `content-googleai`, `france-travel-june-2026`, `mm-playbook-01`, and `fable-automation-ideas`.
+
+## Remaining application and experiment review set
+
+`3d-hero`, `ai-campaign-gen`, `canvas-mvp`, `clearview-gemini-nov24`, `film-arc-generator`, `ideaflow-googleaistudio`, `interactive-avatar`, `lh-voice-2-insight`, `margin`, `nextjs-clean-website-sanity-template`, `oatmeal`, `ricks-park`, `tequila-espresso`, `v0-l0vit-1`, `v0-project-overview-page-design`, and `v0-voice-agent-v1`.
+
+## Complete inventory by lifecycle
+
+### Archived (26)
+
+`margielupo-1`, `nextui-component-library`, `lh-voice-2-insight`, `plants-intro-hero`, `ai-campaign-gen`, `frosted-agent-flow`, `prompts-071525`, `checklists-and-prompts`, `vivid-uiux-prompt-library`, `nightowl-prompts`, `lupo-craft`, `glass-agent-portal`, `canvas-mvp`, `film-arc-generator`, `ai-studio-revamp`, `code-autopsy`, `clearview-gemini-nov24`, `3d-hero`, `ideaflow-googleaistudio`, `content-googleai`, `design-intelligence`, `lupo-engine`, `v0-seo-action-plan`, `v0-project-overview-page-design`, `design-system-hub-ui`, `oatmeal`.
+
+### Active (38)
+
+`localwolfpackai`, `visualize-workflow`, `plant-universe-experiment`, `v0-l0vit-1`, `docs`, `meesh-fullsite`, `margie-social-studio`, `plant-species-app`, `photosynthesis-site`, `aiuiux-playbooks`, `interactive-avatar`, `margin`, `untitled-ui`, `lupo-ai-os`, `daily-dose-agent`, `tequila-espresso`, `visual-canvas`, `claude-config`, `taste`, `ai-insights`, `lupo-portfolio`, `guyfox-seo`, `stealth-the-lab`, `v0-voice-agent-v1`, `geist-pixel-studio`, `bumperdoc-santee`, `mm-playbook-01`, `v0-plants-interactive-gallery`, `tradition-x`, `sessions-and-lessons`, `v0-darkloops`, `margielupo-com`, `margielupo-docs`, `brand-sessions`, `site-contextlup`, `france-travel-june-2026`, `claude-chrome-vault`, `nextjs-clean-website-sanity-template`, `fable-automation-ideas`, `ricks-park`, `the-field-notebook`, `ai-os`, `social-post`.
+
+Note: GitHub returned 64 repositories, while this active-name list includes repositories added after the earlier 64-repository snapshot. Recount and normalize the numeric snapshot on the next full inventory pass before using totals for reporting.
 
 ## Salvage records
 
-- `docs/repo-salvage/2026-07-31-agent-workflow-findings.md` — boundaries and reusable patterns from `claude-config`, `daily-dose-agent`, `code-autopsy`, and `checklists-and-prompts`.
-- `docs/repo-salvage/2026-08-01-prompt-and-visualization-findings.md` — prompt-library overlap and the reusable workflow-visualization pattern.
-- `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md` — OS consolidation plan and review of `taste`, `ai-insights`, and `social-post`.
-- `docs/repo-salvage/2026-08-05-margie-repository-family.md` — production, authority-hub, social-prototype, archived-predecessor, and future Margie OS boundaries.
-- `docs/operating-model/project-lifecycle-and-structure.md` — normalized workspace model salvaged from `ai-os` with file-level provenance.
-- `docs/workflows/fan-out-fan-in-agent-pipeline.md` — portable, safer multi-stage orchestration pattern recovered from `ai-insights` commit history.
-
-## Content and publishing
-
-`brand-sessions`, `docs`, `the-field-notebook`, `sessions-and-lessons`, and the `localwolfpackai` profile repository are active publishing surfaces. `content-googleai` and `france-travel-june-2026` require review for durable records.
-
-## Plants projects
-
-`photosynthesis-site`, `plant-species-app`, `plant-universe-experiment`, `plants-intro-hero`, and `v0-plants-interactive-gallery` form one related project family. Preserve distinctive art and interactions before selecting a primary application.
-
-## Remaining review set
-
-`3d-hero`, `ai-campaign-gen`, `canvas-mvp`, `clearview-gemini-nov24`, `film-arc-generator`, `ideaflow-googleaistudio`, `interactive-avatar`, `lh-voice-2-insight`, `margin`, `mm-playbook-01`, `nextjs-clean-website-sanity-template`, `oatmeal`, `ricks-park`, `tequila-espresso`, `v0-l0vit-1`, `v0-project-overview-page-design`, and `v0-voice-agent-v1`.
+- `docs/repo-salvage/2026-07-31-agent-workflow-findings.md`
+- `docs/repo-salvage/2026-08-01-prompt-and-visualization-findings.md`
+- `docs/repo-salvage/2026-08-02-os-and-incubator-overlap.md`
+- `docs/repo-salvage/2026-08-05-margie-repository-family.md`
+- `docs/repo-salvage/2026-08-06-margie-content-workflow-manifest.md`
+- `docs/operating-model/project-lifecycle-and-structure.md`
+- `docs/workflows/fan-out-fan-in-agent-pipeline.md`
 
 ## Naming system
 
-Use durable purpose-based names. Preferred optional prefixes:
+Prefer durable purpose-based names. Optional prefixes:
 
-- `site-` for websites
-- `app-` for interactive products
-- `kit-` for reusable libraries and templates
-- `lab-` for experiments
-- `agent-` for agent implementations
+- `site-` websites
+- `app-` interactive products
+- `kit-` reusable libraries and templates
+- `lab-` experiments
+- `agent-` agent implementations
 
-Avoid dates, `untitled`, and generator names such as `v0-` once a project has a real identity.
+Avoid dates, `untitled`, and generator names such as `v0-` once a project has a durable identity.
 
-## Provenance rule
+## Provenance and lifecycle rule
 
-Every salvaged item must record its source repository, original file path, destination, and reason for preservation. No repository lifecycle change happens automatically.
+Every salvaged item must record source repository, original path, destination, reason for preservation, and whether it was copied, adapted, or only documented. No repository is renamed, archived, deleted, or removed automatically.
