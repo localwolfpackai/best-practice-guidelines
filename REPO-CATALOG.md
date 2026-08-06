@@ -4,9 +4,9 @@ Central inventory and disposition map for the `localwolfpackai` GitHub estate.
 
 ## Inventory snapshot
 
-- Repositories inventoried: **64**
+- Repositories inventoried: **69**
 - Archived: **26**
-- Active: **38**
+- Active: **43**
 - Automatically renamed, archived, or deleted: **0**
 - Last focused review: **2026-08-06 — Margie content workflow salvage**
 
@@ -104,11 +104,9 @@ Review for durable content or clearer boundaries: `content-googleai`, `france-tr
 
 `margielupo-1`, `nextui-component-library`, `lh-voice-2-insight`, `plants-intro-hero`, `ai-campaign-gen`, `frosted-agent-flow`, `prompts-071525`, `checklists-and-prompts`, `vivid-uiux-prompt-library`, `nightowl-prompts`, `lupo-craft`, `glass-agent-portal`, `canvas-mvp`, `film-arc-generator`, `ai-studio-revamp`, `code-autopsy`, `clearview-gemini-nov24`, `3d-hero`, `ideaflow-googleaistudio`, `content-googleai`, `design-intelligence`, `lupo-engine`, `v0-seo-action-plan`, `v0-project-overview-page-design`, `design-system-hub-ui`, `oatmeal`.
 
-### Active (38)
+### Active (43)
 
 `localwolfpackai`, `visualize-workflow`, `plant-universe-experiment`, `v0-l0vit-1`, `docs`, `meesh-fullsite`, `margie-social-studio`, `plant-species-app`, `photosynthesis-site`, `aiuiux-playbooks`, `interactive-avatar`, `margin`, `untitled-ui`, `lupo-ai-os`, `daily-dose-agent`, `tequila-espresso`, `visual-canvas`, `claude-config`, `taste`, `ai-insights`, `lupo-portfolio`, `guyfox-seo`, `stealth-the-lab`, `v0-voice-agent-v1`, `geist-pixel-studio`, `bumperdoc-santee`, `mm-playbook-01`, `v0-plants-interactive-gallery`, `tradition-x`, `sessions-and-lessons`, `v0-darkloops`, `margielupo-com`, `margielupo-docs`, `brand-sessions`, `site-contextlup`, `france-travel-june-2026`, `claude-chrome-vault`, `nextjs-clean-website-sanity-template`, `fable-automation-ideas`, `ricks-park`, `the-field-notebook`, `ai-os`, `social-post`.
-
-Note: GitHub returned 64 repositories, while this active-name list includes repositories added after the earlier 64-repository snapshot. Recount and normalize the numeric snapshot on the next full inventory pass before using totals for reporting.
 
 ## Salvage records
 
